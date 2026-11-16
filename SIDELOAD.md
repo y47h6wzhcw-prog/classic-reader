@@ -331,13 +331,22 @@ SideInstaller 会自动识别并安装。
 ### 3.1 准备 Sideloadly
 
 1. 访问 <https://sideloadly.io>，下载 Windows 版
+   > 本项目已预下载到 `dist/tools/SideloadlySetup64.exe`（138MB）和
+   > `dist/tools/iTunes64.exe`（194MB），可直接运行，无需再下载。
 2. 安装
 3. **重要**：Windows 上需先安装 Apple 官方的
    [iTunes 网页版](https://www.apple.com/itunes/) 和
    [iCloud 网页版](https://www.icloud.com/)。
    如果你装的是 Microsoft Store 版，Sideloadly 无法使用，需先卸载。
-   > iTunes 网页版安装包会一并装上 **Bonjour** 服务，
-   > 它是 Wi-Fi 侧载的必需组件。
+
+> **Wi-Fi 侧载还需要 Bonjour 服务**（Apple 的设备发现组件）。
+> 它通常随 iTunes 网页版安装包一起装上，但**并非总能成功**——
+> 实测本机 iTunes 12.13.12.3 已安装，Bonjour 却缺失。
+>
+> 若 Sideloadly 里看不到设备、或无法通过 WiFi 发现手机，
+> 从 Apple 支持页单独装一次 Bonjour：
+> <https://support.apple.com/zh-cn/HT204289>（下载「Bonjour Print Editor」即可，
+> 它包含 Bonjour 服务），装完重启电脑再试。
 
 ### 3.2 手机端设置
 
