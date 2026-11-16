@@ -391,7 +391,73 @@ SideInstaller 会自动识别并安装。
 
 免费 Apple ID 签名的应用 **7 天后会失效**：图标还在桌面，但点开会闪退。
 
-### 自动续签（推荐）
+### 根本原因
+
+7 天来自 Apple 对**免费账号**签发的 Personal Team 描述文件（provisioning profile）
+的硬性有效期——这是 Apple 侧的安全设计，不是工具的缺陷。
+
+**除了 TrollStore 依赖的系统漏洞外，没有纯技术手段能绕过。**
+该漏洞（AMFI/CoreTrust 证书校验）在 **iOS 17.0.1 起已修复**，
+所以 iOS 26/27 上不存在永久免费自签方案。
+
+### 五种应对方案
+
+| 方案 | 有效期 | 免电脑 | 成本 | 操作频率 |
+|---|---|---|---|---|
+| **AirSign + 付费开发者账号** | **1 年** | 是 | ¥688/年 | 一年一次续费 |
+| AirSign + 免费 Apple ID | 7 天 | 是 | 0 元 | 每 5–6 天点一次 Re-sign |
+| LiveContainer + AirSign | 7 天 | 是 | 0 元 | 每 5–6 天续签 1 个容器 |
+| TrollStore | 永久 | 是 | 0 元 | ❌ iOS 27 不支持 |
+| 企业证书 / 共享证书 | 不确定 | 是 | 按月付费 | ⚠️ 随时掉签，不推荐 |
+
+### 方案一：付费开发者账号（唯一真正解决）
+
+- **费用**：¥688 / 年（个人与公司同价，中国大陆）
+  - 注册现已支持在 **iPhone 上用 Apple Developer App 完成**，
+    不需要电脑：<https://developer.apple.com/cn/support/app-account/>
+  - 需要：身份证、已开启双重认证的 Apple 账号、注册用 iPhone
+- **收益**：
+  - 开发/Ad Hoc 描述文件最长 **1 年**有效期，跟着会员走
+  - 侧载 App 数量**不再受 3 个限制**，App ID 也不再受每周 10 个限制
+  - Ad Hoc 可分发到 **100 台设备**（可以给家人装同一本）
+  - 配合 AirSign 使用时，**连配对都不需要**（官方文档：
+    Paid Developer → "No wireless pairing & no VPN — direct local OTA install"）
+- **注意**：会员一旦到期，这类自装 App 会陆续失效，需续费后重新安装
+
+### 方案二：免费账号 + 手动 Re-sign（当前路径，最省事）
+
+用 AirSign 装好后，每 5～6 天：
+
+1. 打开 AirSign，保持同一 Apple ID 登录
+2. 在 **INSTALLED APPS** 列表找到「经典书房」→ 点 **Re-sign**
+3. iOS **原地覆盖升级**，阅读进度、书签全部保留
+
+> AirSign 目前**不支持后台自动续签**，这一步必须手动。
+> 建议在日历里设个每 6 天的提醒。
+
+### 方案三：LiveContainer 容器（装多个 App 时才划算）
+
+AirSign 内置了 LiveContainer 的一键安装（Section 1 的
+**📦 LiveContainer** → **🚀 1. Install LiveContainer**）：
+
+- LiveContainer 只占 **1 个侧载名额**，里面能装无限多个 App
+- 续签时只需续签 LiveContainer 一个，里面的 App 一起更新
+- ⚠️ **7 天限制依然适用**：容器到期时，里面的 App 全部打不开，
+  直到 LiveContainer 被重新刷新为止
+- 只装一个阅读 App 的话，用不上它
+
+### 排查：闪退但显示"开发者不受信任"
+
+若重签后 App 仍提示不受信任：
+
+1. 确认 **设置 › 通用 › VPN 与设备管理** 里已信任你的 Apple ID
+2. 确认 **设置 › 隐私与安全性 › 开发者模式** 已开启
+3. 若提示描述文件缺少权限（Missing Entitlements），
+   用 StikDebug 的 **App Expiry** 工具查看，在 SideStore 里**重新安装一次该 IPA** 即可修复
+
+---
+
+## 四之二、免费方案的自动续签（Sideloadly 路径，iOS 26 及以下）
 
 Sideloadly 自带后台守护程序，会在过期前自动重签：
 
@@ -400,8 +466,6 @@ Sideloadly 自带后台守护程序，会在过期前自动重签：
 3. 保持 Sideloadly 常驻运行，或加入开机启动
 
 只要电脑开着且 Sideloadly 在后台运行，App 会一直可用。
-
-### 手动续签
 
 若已失效：连接手机，打开 Sideloadly，点 **Start** 重新安装即可。
 **你的阅读进度不会丢失**，因为进度存在手机本地的 SharedPreferences 里。
