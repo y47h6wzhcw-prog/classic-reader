@@ -35,7 +35,7 @@ void main() {
   });
 
   test('ReaderPrefs 序列化往返一致', () {
-    const p = ReaderPrefs(
+    final p = ReaderPrefs(
       fontSize: 22,
       lineHeight: 2.0,
       themeMode: ThemeMode.dark,

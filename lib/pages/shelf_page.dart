@@ -23,7 +23,7 @@ class ShelfPage extends StatefulWidget {
   State<ShelfPage> createState() => _ShelfPageState();
 }
 
-class _ShelfPageState extends State<ShelfPage> {
+class _ShelfPageState extends State<ShelfPage> with SingleTickerProviderStateMixin {
   Map<int, BookProgress> _progress = {};
   int _tab = 0; // 0=中文 1=英文 2=最近
   String _query = '';
@@ -120,7 +120,7 @@ class _ShelfPageState extends State<ShelfPage> {
                       borderSide: BorderSide.none,
                     ),
                     filled: true,
-                    fillColor: Theme.of(context).colorScheme.surfaceVariant
+                    fillColor: Theme.of(context).colorScheme.surfaceContainerHighest
                         .withOpacity(.6),
                   ),
                 ),

@@ -24,7 +24,7 @@ class ClassicReaderApp extends StatefulWidget {
 }
 
 class _ClassicReaderAppState extends State<ClassicReaderApp> {
-  ReaderPrefs _prefs = const ReaderPrefs();
+  ReaderPrefs _prefs = ReaderPrefs();
 
   @override
   void initState() {

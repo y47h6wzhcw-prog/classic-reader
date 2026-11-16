@@ -151,8 +151,11 @@ class _ReaderPageState extends State<ReaderPage> {
           Navigator.pop(ctx);
           if (!_scroll.hasClients) return;
           final target = _offsetToPixel(offset);
-          _scroll.animateTo(target.clamp(0, _scroll.position.maxScrollExtent),
-              duration: const Duration(milliseconds: 260));
+          _scroll.animateTo(
+            target.clamp(0, _scroll.position.maxScrollExtent),
+            duration: const Duration(milliseconds: 260),
+            curve: Curves.easeOut,
+          );
         },
       ),
     );
@@ -432,7 +435,7 @@ class _SettingsSheetState extends State<_SettingsSheet> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text('阅读设置',
-                style: Theme.of(ctx)
+                style: Theme.of(context)
                     .textTheme
                     .titleMedium
                     ?.copyWith(fontWeight: FontWeight.w500)),
