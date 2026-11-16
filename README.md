@@ -78,24 +78,29 @@ bash push_to_github.sh <你的GitHub用户名> <PersonalAccessToken>
 
 ### 再装机
 
-| 你的 iOS 版本 | 方式 | 需要数据线？ |
-|---|---|---|
-| **iOS 27+** | [手机端全无线安装](https://sideinstaller.net/open.html?url=https%3A%2F%2Fgithub.com%2Fy47h6wzhcw-prog%2Fclassic-reader%2Freleases%2Fdownload%2Fv1.0.0%2Freader-1-unsigned.ipa) | ❌ 不需要 |
-| iOS 17.4 ~ 26.x | Sideloadly Wi-Fi 侧载 | 首次需要一次 |
-| iOS 17 以下 | Sideloadly USB 侧载 | 需要 |
+| 你的 iOS 版本 | 方式 | 需要数据线？ | 国区可用？ |
+|---|---|---|---|
+| **iOS 27+** | **AirSign**（TestFlight 分发） | ❌ 不需要 | ✅ 可以 |
+| iOS 27+ 且有美区/港区 ID | SideInstaller（开源） | ❌ 不需要 | ❌ 需切区 |
+| iOS 17.4 ~ 26.x | Sideloadly Wi-Fi 侧载 | 首次需要一次 | ✅ 可以 |
+| iOS 17 以下 | Sideloadly USB 侧载 | 需要 | ✅ 可以 |
 
 > **iOS 27 起支持「设备自配对」**，iPhone 可以自己完成配对与签名，
 > 整个安装流程无需电脑、无需数据线。
-> 手机上打开 [安装指引页](https://github.com/y47h6wzhcw-prog/classic-reader/releases/download/v1.0.0/install.html)
-> 可看图文版步骤。
+>
+> **国区用户走 AirSign**：只需 TestFlight（国区 App Store 有），
+> 它的官方指南在 <https://tarplay.com/airsign/guide/>，
+> 安装链接 <https://testflight.apple.com/join/uvCeQG8t>。
+> 手机上还有一份图文版指引：
+> <https://github.com/y47h6wzhcw-prog/classic-reader/releases/download/v1.0.0/install.html>
 
 ### 换书 / 重新出包
 
 改 `assets/books/` 下的 txt 与 `manifest.json`（或改 `tools/fetch_books.py`
 让脚本自动下载），推一次代码，Actions 会自动重新出包。
 
-> 免费 Apple ID 签名有效期 7 天。到期前用 SideStore 的 **Refresh All**
-> 重签即可，**不需要电脑**。
+> 免费 Apple ID 签名有效期 7 天。到期前用 AirSign 的 **Re-sign**
+> 或 SideStore 的 **Refresh All** 重签即可，**不需要电脑**。
 
 ---
 

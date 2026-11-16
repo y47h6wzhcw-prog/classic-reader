@@ -9,31 +9,32 @@
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   body{
     font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
-    background:#F1EFE8;color:#23201C;line-height:1.6;
-    padding:0 0 40px;max-width:560px;margin:0 auto;
+    background:#F1EFE8;color:#23201C;line-height:1.62;
+    padding:0 0 44px;max-width:560px;margin:0 auto;
   }
-  .hero{background:#FAF8F3;padding:28px 22px 22px;border-bottom:1px solid #DDD9CE}
-  .hero h1{font-size:23px;font-weight:600;letter-spacing:.01em}
+  .hero{background:#FAF8F3;padding:30px 22px 22px;border-bottom:1px solid #DDD9CE}
+  .hero h1{font-size:23px;font-weight:600}
   .hero p{font-size:13px;color:#5F5E5A;margin-top:6px}
   .badge{display:inline-block;background:#E1F5EE;color:#0F6E56;font-size:11px;
-    padding:3px 9px;border-radius:20px;margin-top:12px;font-weight:500}
+    padding:4px 10px;border-radius:20px;margin-top:13px;font-weight:500}
   .wrap{padding:20px 22px}
-  h2{font-size:16px;font-weight:600;margin:26px 0 12px;display:flex;align-items:center;gap:8px}
-  h2 .n{background:#8C6A4A;color:#fff;width:22px;height:22px;border-radius:50%;
+  h2{font-size:16.5px;font-weight:600;margin:28px 0 12px;display:flex;align-items:center;gap:9px}
+  h2 .n{background:#8C6A4A;color:#fff;width:23px;height:23px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
-  .card{background:#fff;border:1px solid #E2DED2;border-radius:12px;padding:14px 16px;margin-bottom:12px}
+  h3{font-size:14.5px;font-weight:600;margin:18px 0 8px}
+  .card{background:#fff;border:1px solid #E2DED2;border-radius:12px;padding:15px 17px;margin-bottom:12px}
   .card p{font-size:14px;color:#3A3833}
   .card p+p{margin-top:8px}
   code{background:#EDEAE1;padding:2px 6px;border-radius:4px;font-size:12.5px;
     font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
   .cmd{background:#2C2C2A;color:#E8E6DF;border-radius:8px;padding:12px 14px;
     font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;
-    overflow-x:auto;line-height:1.65;margin:10px 0}
+    overflow-x:auto;line-height:1.6;margin:10px 0}
   .btn{display:block;background:#8C6A4A;color:#fff;text-decoration:none;
-    padding:15px 18px;border-radius:12px;font-size:16px;font-weight:500;text-align:center;
-    margin:14px 0}
+    padding:15px 18px;border-radius:12px;font-size:16px;font-weight:500;text-align:center;margin:14px 0}
   .btn.ghost{background:#fff;color:#8C6A4A;border:1.5px solid #8C6A4A}
   .btn small{display:block;font-size:11.5px;opacity:.85;font-weight:400;margin-top:3px}
+  .btn.tf{background:#0A84FF}
   ol{padding-left:20px;font-size:14px}
   ol li{margin-bottom:9px}
   ul{padding-left:20px;font-size:14px}
@@ -42,18 +43,18 @@
     padding:12px 14px;font-size:13px;color:#5C4008;margin:14px 0}
   .note b{color:#3D2A03}
   .ok{background:#E1F5EE;border-left:3px solid #0F6E56;border-radius:0 8px 8px 0;
-    padding:12px 14px;font-size:13px;color:#0A4436;margin:14px 0}
-  .apps{display:flex;flex-direction:column;gap:8px;margin:12px 0}
-  .app{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #E2DED2;
-    border-radius:10px;padding:11px 13px;text-decoration:none;color:inherit}
-  .app .ic{width:38px;height:38px;border-radius:9px;background:#F1EFE8;display:flex;
-    align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
-  .app .t{font-size:14px;font-weight:500}
-  .app .d{font-size:11.5px;color:#888780}
-  .app .go{margin-left:auto;color:#8C6A4A;font-size:13px}
-  .meta{font-size:12px;color:#888780;text-align:center;margin-top:30px;line-height:1.8}
+    padding:13px 15px;font-size:13px;color:#0A4436;margin:14px 0}
+  .warn{background:#FCEBEB;border-left:3px solid #E24B4A;border-radius:0 8px 8px 0;
+    padding:13px 15px;font-size:13px;color:#8C2626;margin:14px 0}
+  .meta{font-size:12px;color:#888780;text-align:center;margin-top:32px;line-height:1.8}
   a{color:#8C6A4A}
-  .steps-num{counter-reset:s}
+  .alt{margin-top:34px;border-top:1px solid #DDD9CE;padding-top:22px}
+  .step{display:flex;gap:12px;margin-bottom:14px}
+  .step .num{flex-shrink:0;width:25px;height:25px;border-radius:50%;background:#E6F1FB;color:#185FA5;
+    display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600}
+  .step .body{flex:1;font-size:14px}
+  .step .body b{display:block;margin-bottom:2px}
+  .step .body span{color:#5F5E5A;font-size:13px}
 </style>
 </head>
 <body>
@@ -61,110 +62,140 @@
 <div class="hero">
   <h1>经典书房 · Classic Reader</h1>
   <p>125 本中英文公版名著，离线阅读，无网络请求</p>
-  <span class="badge">iOS 27 无线安装 · 无需数据线 · 无需电脑</span>
+  <span class="badge">iOS 27 无线安装 · 免数据线 · 免电脑 · 国区可用</span>
 </div>
 
 <div class="wrap">
 
   <div class="ok">
-    <b>好消息：</b>你的 iOS 27 支持「设备自配对」，整个安装过程可以在 iPhone 上完成，
-    不用数据线、不用电脑。下面的 App 都从 App Store 官方下载。
+    <b>好消息：</b>iOS 27 支持「设备自配对」，整个安装过程在 iPhone 上完成，
+    不用数据线、不用电脑。下面用的 AirSign 走 <b>TestFlight 官方分发</b>，
+    国区 App Store 可以直接下载 TestFlight，不用切区、不用小号。
   </div>
 
-  <h2><span class="n">1</span>装三个官方 App</h2>
-  <div class="apps">
-    <a class="app" href="https://apps.apple.com/app/id6755794662" target="_blank" rel="noopener">
-      <span class="ic">⌘</span>
-      <span><span class="t">rootshell</span><br><span class="d">本地终端 · App Store</span></span>
-      <span class="go">获取 ›</span>
-    </a>
-    <a class="app" href="https://apps.apple.com/app/id6759188481" target="_blank" rel="noopener">
-      <span class="ic">▤</span>
-      <span><span class="t">Open Minis</span><br><span class="d">运行安装脚本 · App Store</span></span>
-      <span class="go">获取 ›</span>
-    </a>
-    <a class="app" href="https://apps.apple.com/app/id6755608044" target="_blank" rel="noopener">
-      <span class="ic">⇄</span>
-      <span><span class="t">LocalDevVPN</span><br><span class="d">本地回环隧道 · App Store</span></span>
-      <span class="go">获取 ›</span>
-    </a>
-  </div>
-  <p style="font-size:13px;color:#5F5E5A">三个都是免费 App Store 应用，无需账号。</p>
-
-  <h2><span class="n">2</span>装 SideInstaller</h2>
+  <h2><span class="n">1</span>装 AirSign</h2>
   <div class="card">
-    <p>打开 <a href="https://sideinstaller.net/" target="_blank" rel="noopener">sideinstaller.net</a>，
-    按页面上的 1→2→3 步操作：</p>
-    <ul>
-      <li>在 rootshell 里打开 <b>Local Shell</b>（右上角 Open），逐行执行：</li>
-    </ul>
-    <div class="cmd">curl -fsSLO https://raw.githubusercontent.com/FrizzleM/siboot/main/rootshell/bin/siboot-pair.wasm
-ifconfig en0 &gt; ifconfig.txt
-./siboot-pair.wasm</div>
-    <ul>
-      <li>rootshell 会显示一个<b>配对码</b>。打开
-        <b>设置 › 隐私与安全性 › 开发者模式</b>，滚到底部点 <b>Pair with siboot</b>，
-        输入密码和那个配对码。</li>
-      <li>回到 rootshell，保持它运行。</li>
-      <li>连接 LocalDevVPN，打开 Open Minis，右上角控制台图标 →
-        <b>Shell Terminal</b>，执行：</li>
-    </ul>
-    <div class="cmd">wget -qO- https://raw.githubusercontent.com/FrizzleM/siboot/main/minis/install.sh | sh</div>
-    <ul>
-      <li>输入 rootshell 显示的传输码（仅首次），再输入你的
-        <b>Apple ID 邮箱、密码和验证码</b>。</li>
-      <li>首次完成后，去 <b>设置 › 通用 › VPN 与设备管理</b> 信任你的 Apple 账号。</li>
-    </ul>
-  </div>
-
-  <div class="note">
-    <b>关于 Apple ID：</b>它只在本机用于签名，<b>不会上传到任何服务器</b>。
-    SideInstaller 开源可审计。建议用小号。
-  </div>
-
-  <h2><span class="n">3</span>装经典书房</h2>
-  <div class="card">
-    <p>SideInstaller 装好后：</p>
-    <ul>
-      <li>保持 <b>LocalDevVPN 已连接</b>，打开 SideInstaller</li>
-      <li>登录 Apple ID → 点 <b>Install SideStore</b>（或 SideStore + LiveContainer）</li>
-      <li>SideStore 装好后，Safari 打开下面这个链接即可一键装经典书房：</li>
-    </ul>
-    <a class="btn" href="https://sideinstaller.net/open.html?url=https%3A%2F%2Fgithub.com%2Fy47h6wzhcw-prog%2Fclassic-reader%2Freleases%2Fdownload%2Fv1.0.0%2Freader-1-unsigned.ipa">
-      一键安装经典书房
-      <small>点我 → Safari 会交给 SideInstaller 处理</small>
+    <p>用 iPhone 的 <b>Safari</b> 打开这个链接，按提示安装：</p>
+    <a class="btn tf" href="https://testflight.apple.com/join/uvCeQG8t">
+      打开 TestFlight 邀请链接
+      <small>testflight.apple.com/join/uvCeQG8t</small>
     </a>
-    <p style="margin-top:10px;font-size:13px;color:#5F5E5A">
-      页面会显示 IPA 的下载地址，并提供按钮把它交给 SideInstaller。
-      若 Safari 没自动跳转，就点页面上的按钮。
+    <ul>
+      <li>没装 TestFlight 会自动跳到 App Store 让你装（国区有）</li>
+      <li>点 <b>Accept / Install</b> 接受邀请，等下载完成</li>
+      <li>首次打开如果提示要打开开发者模式，按提示走（见第 2 步）</li>
+    </ul>
+    <p style="font-size:13px;color:#5F5E5A;margin-top:10px">
+      官方文档：<a href="https://tarplay.com/airsign/guide/" target="_blank" rel="noopener">tarplay.com/airsign/guide</a>
+      （Safari 打开后可用菜单「翻译成简体中文」）
     </p>
   </div>
 
-  <h2><span class="n">4</span>首次打开</h2>
+  <h2><span class="n">2</span>开开发者模式</h2>
   <div class="card">
     <ul>
-      <li>打开「经典书房」，如提示<b>不受信任的开发者</b>→
-        设置 › 通用 › VPN 与设备管理 › 点你的 Apple ID → 信任</li>
-      <li>如提示需要<b>开发者模式</b>→ 设置 › 隐私与安全性 › 开发者模式 → 开启 → 重启手机</li>
+      <li><b>设置 › 隐私与安全性 › 开发者模式</b> → 打开</li>
+      <li>手机会<b>重启</b>，重启后回到这个页面点「启用」确认</li>
+    </ul>
+    <p style="font-size:13px;color:#5F5E5A;margin-top:8px">
+      这一步是 Apple 对所有侧载 App 的强制要求，不开无法签名安装。
+    </p>
+  </div>
+
+  <h2><span class="n">3</span>在 AirSign 里登录并配对</h2>
+  <div class="card">
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body"><b>检测设备 UDID</b>
+        <span>首页 UDID 旁点「检测 / Detect」→ 选「Auto-Detect via Safari Profile」→ 允许 →
+        回到「设置」点「已下载描述文件」→ 安装。这个临时描述文件会自动移除。</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body"><b>登录 Apple ID</b>
+        <span>「2. APPLE ACCOUNT」区 → 点「Sign In with Apple ID」→ 填邮箱、密码和 6 位验证码。</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body"><b>无线配对（仅 iOS 27+，免电脑的关键）</b>
+        <span>在「APPLE ACCOUNT」区点 <b>Wireless Pair (No PC)</b> →
+        AirSign 会显示一个 6 位配对码 →
+        打开 <b>设置 › 隐私与安全性 › 开发者模式</b>，滚到底部点
+        <b>Pair with AirSign</b>，输入锁屏密码和那 6 位码。</span>
+      </div>
+    </div>
+    <div class="note">
+      <b>2FA 收不到短信？</b>在验证码输入框里有「<b>Send Code via SMS</b>」和
+      「<b>Call Me with Code</b>」按钮，语音电话通常更可靠。
+      另需在 <b>设置 › 隐私与安全性 › 本地网络</b> 里确认 AirSign 已打开。
+    </div>
+  </div>
+
+  <h2><span class="n">4</span>签名并安装</h2>
+  <div class="card">
+    <p>在 AirSign 首页「1. SIGN &amp; INSTALL .IPA」区：</p>
+    <ul>
+      <li>点 <b>🌐 Sign &amp; Install from URL</b>（从链接获取），粘贴下面的地址：</li>
+    </ul>
+    <div class="cmd">https://github.com/y47h6wzhcw-prog/classic-reader/releases/download/v1.0.0/reader-1-unsigned.ipa</div>
+    <ul>
+      <li>点 <b>签名</b>，等进度条走完</li>
+      <li>弹出「tarplay.com 想要安装…」→ 点 <b>安装</b></li>
+      <li>回到桌面，「经典书房」图标就出来了</li>
+    </ul>
+    <p style="font-size:13px;color:#5F5E5A;margin-top:10px">
+      也可以先用 Safari 下载 IPA 到「文件」App，再点
+      <b>📦 Pick &amp; Sign .ipa from Files</b> 选中它。
+    </p>
+  </div>
+
+  <h2><span class="n">5</span>首次打开</h2>
+  <div class="card">
+    <ul>
+      <li>打开「经典书房」，若提示<b>不受信任的开发者</b> →
+        <b>设置 › 通用 › VPN 与设备管理</b> → 点你的 Apple ID → 信任</li>
+      <li>若提示需要开发者模式 → <b>设置 › 隐私与安全性 › 开发者模式</b> → 开 → 重启</li>
     </ul>
   </div>
 
   <h2>关于 7 天有效期</h2>
   <div class="card">
-    <p>免费 Apple ID 签名的 App 有效期 7 天。到期前用 SideStore 打开
-    <b>My Apps</b> → <b>Refresh All</b> 重签即可，无需电脑、无需数据线。</p>
+    <p>免费 Apple ID 签名的 App 有效期 7 天。到期前打开 AirSign，保持同一 Apple ID 登录，
+    在 <b>INSTALLED APPS</b> 列表里找到「经典书房」点 <b>Re-sign</b>（或重新选同一个 IPA 签名），
+    iOS 会<b>原地覆盖升级</b>，阅读进度、书签都保留。</p>
     <p style="font-size:13px;color:#5F5E5A">
-      建议每 5～6 天手动刷新一次，或在 SideStore 设置里开启后台自动刷新。
-      你的阅读进度存在本机，重签不会丢。
+      建议每 5～6 天刷一次。免费账号最多同时装 3 个侧载 App —— 只装这一个不受影响。
     </p>
   </div>
 
-  <div class="note">
-    <b>安全提示：</b>只从
-    <a href="https://sideinstaller.net/">sideinstaller.net</a> 和
-    <a href="https://github.com/FrizzleM/SideInstaller">官方 GitHub</a> 获取 SideInstaller。
-    注意 <code>sideinstaller.com</code> 是<b>假站点</b>，可能携带木马。
-    这类工具开放源码，任何人都会做同样的图标和名字分发恶意版本。
+  <h2>隐私说明</h2>
+  <div class="card">
+    <p>AirSign 的 Apple ID 登录是<b>手机直连 gsa.apple.com</b>（Apple 官方服务器），
+    私钥和证书全程留在本机，不经过 AirSign 的服务器。它只在两处联系自己的域名：
+    UDID 一次性登记、以及你主动点「Send Diagnostics」时。</p>
+  </div>
+
+  <div class="warn">
+    <b>请注意：</b>AirSign 是较新的第三方工具（v1.0，早期阶段），建议先用一个
+    无所谓的小 IPA 试一遍完整流程，确认没问题再装正式应用。
+    <b>不要用主力 Apple ID</b>，用小号。IPA 请只从本页或 GitHub 仓库获取。
+  </div>
+
+  <div class="alt">
+    <h3 style="margin-top:0">备选方案：SideInstaller（需美区/港区 Apple ID）</h3>
+    <p style="font-size:13.5px;color:#3A3833">
+      如果你想用 SideStore 生态（可后台自动续签），另一条路是
+      <a href="https://sideinstaller.net/" target="_blank" rel="noopener">SideInstaller</a>，
+      但它依赖 <code>rootshell</code> 和 <code>LocalDevVPN</code> 两个 App——
+      这两个<b>国区 App Store 没有</b>（实测），需要美区或港区账号。
+      AirSign 不需要切区，是国区最省事的路。
+    </p>
+    <p style="font-size:12.5px;color:#888780;margin-top:8px">
+      ⚠️ 只从 sideinstaller.net 和官方 GitHub 获取 SideInstaller，
+      <code>sideinstaller.com</code> 是假站点。
+    </p>
   </div>
 
   <div class="meta">
