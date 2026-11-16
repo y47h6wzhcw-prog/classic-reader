@@ -106,6 +106,19 @@ bash push_to_github.sh <你的GitHub用户名>
 | 代理端口会轮换 | 从环境变量读取，失效时自动探测重连 |
 | 代理会拒绝 http.client 的 CONNECT 隧道 | 改用 urllib 的 ProxyHandler |
 
+### GitHub 相关脚本
+
+| 脚本 | 用途 |
+|---|---|
+| `tools/create_repo.py` | 通过 API 创建公开仓库（网页端被拦时的替代方案） |
+| `tools/upload_workflow.py` | 通过 Contents API 上传 workflow 文件 |
+| `tools/api_commit.py` | **git 协议不通时**，用 Git Data API 提交文件改动 |
+| `tools/download_artifact.py` | 下载 Actions 产出的 IPA（自动处理 S3 重定向） |
+
+> **artifact 下载坑**：GitHub 的 artifact 下载会 302 重定向到 S3，
+> S3 不接受 GitHub 的 `Bearer` 头。必须自定义 `HTTPRedirectHandler`
+> 在重定向时剥掉 `Authorization`，否则会一直 401。
+
 ---
 
 ## 版权说明

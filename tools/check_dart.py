@@ -60,7 +60,7 @@ for f in dart_files():
 # 4. 已废弃 API 残留
 for f in dart_files():
     src = open(f, encoding="utf-8").read()
-    for bad in ("_estimateOffset", ".withValues(", "surfaceContainerHighest"):
+    for bad in ("_estimateOffset", ".withValues(", "surfaceVariant"):
         if bad in src:
             errors.append(f"{f}: 残留不兼容/废弃 API -> {bad}")
 
