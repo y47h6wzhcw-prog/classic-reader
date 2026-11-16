@@ -5,8 +5,21 @@
 
 ```
 写代码（Windows）→ 推到 GitHub → 云端 macOS 编译出 IPA
-→ 下载 IPA → Sideloadly 侧载 → 装到 iPhone 上
+→ iPhone 上安装
 ```
+
+---
+
+## 选哪条路装？
+
+| 你的 iOS 版本 | 推荐路径 | 需要数据线？ |
+|---|---|---|
+| **iOS 27+**（如 27.0.1） | **第二节：手机端全无线安装** | ❌ 不需要 |
+| iOS 17.4 ~ 26.x | 第三节：Sideloadly Wi-Fi 侧载 | 首次需要一次 |
+| iOS 17 以下 | 第三节：Sideloadly USB 侧载 | 需要 |
+
+> 关键分水岭：**iOS 27 起支持「设备自配对」**，iPhone 可以自己完成配对，
+> 因此整个安装流程不再需要电脑和数据线。
 
 ---
 
@@ -14,9 +27,9 @@
 
 | 项 | 要求 | 说明 |
 |---|---|---|
-| 电脑 | Windows / macOS / Linux 均可 | 你这台 Windows 就够 |
+| 电脑 | Windows / macOS / Linux 均可 | 这台 Windows 就够（仅云端编译时用） |
 | iPhone | iOS 16 及以上 | iOS 16+ 必须开启「开发者模式」 |
-| 数据线 | 一根 | 首次安装必须 USB 连接 |
+| 数据线 | 一根 | **iOS 27 可完全免**，见第二节 |
 | Apple ID | **免费**普通账号 | 就是你 iPhone 上登录的那个，无需注册开发者 |
 | GitHub 账号 | 免费 | 用来触发云端编译，注册约 2 分钟 |
 | 邮箱 | 能收验证码 | QQ / 163 / Gmail 均可，用于注册 GitHub |
@@ -144,9 +157,102 @@ git push -u origin main
 
 ---
 
-## 二、装到 iPhone 上（Sideloadly 侧载）
+## 二、iOS 27+：手机端全无线安装（免数据线）
 
-### 2.1 准备 Sideloadly
+> iOS 27 起支持「设备自配对」，iPhone 能自己完成配对与签名，
+> **全程不需要电脑、不需要数据线**。
+> 下面用的 [SideInstaller](https://github.com/FrizzleM/SideInstaller) 是开源项目，
+> 代码可审计，Apple ID 只在本机使用、不上传任何服务器。
+
+### 2.1 装三个官方 App（App Store，免费）
+
+| App | 作用 | 链接 |
+|---|---|---|
+| **rootshell** | 本地终端 | <https://apps.apple.com/app/id6755794662> |
+| **Open Minis** | 运行安装脚本 | <https://apps.apple.com/app/id6759188481> |
+| **LocalDevVPN** | 本地回环隧道（10.7.0.1） | <https://apps.apple.com/app/id6755608044> |
+
+### 2.2 用 siboot 装 SideInstaller
+
+打开 <https://sideinstaller.net/>，按页面 1→2→3 步操作：
+
+**步骤 1 · 在 rootshell 里配对**
+
+打开 rootshell → 右上角 **Open** → **Local Shell**，逐行执行：
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/FrizzleM/siboot/main/rootshell/bin/siboot-pair.wasm
+ifconfig en0 > ifconfig.txt
+./siboot-pair.wasm
+```
+
+rootshell 会显示一个**配对码**。接着打开
+**设置 › 隐私与安全性 › 开发者模式**，滚到底部点 **Pair with siboot**，
+输入锁屏密码和那个配对码。**保持 rootshell 运行。**
+
+**步骤 2 · 在 Open Minis 里安装**
+
+连接 LocalDevVPN → 打开 Open Minis → 右上角控制台图标 →
+**Shell Terminal**，执行：
+
+```bash
+wget -qO- https://raw.githubusercontent.com/FrizzleM/siboot/main/minis/install.sh | sh
+```
+
+输入 rootshell 显示的传输码（仅首次），再输入你的
+**Apple ID 邮箱、密码和验证码**。Minis 保持打开直到提示完成。
+
+**步骤 3 · 信任开发者**
+
+**设置 › 通用 › VPN 与设备管理** → 点你的 Apple ID → 信任。
+
+### 2.3 装 SideStore
+
+保持 LocalDevVPN 已连接 → 打开 SideInstaller → 登录 Apple ID →
+点 **Install SideStore**（或 **SideStore + LiveContainer**）。
+
+> LiveContainer 是个「容器」，可以把 App 装进去，从而绕开免费账号
+> 「同时只能装 3 个 App」的限制。只装一个阅读器的话不必选它。
+
+### 2.4 一键安装经典书房
+
+Safari 打开下面这个链接：
+
+<https://sideinstaller.net/open.html?url=https%3A%2F%2Fgithub.com%2Fy47h6wzhcw-prog%2Fclassic-reader%2Freleases%2Fdownload%2Fv1.0.0%2Freader-1-unsigned.ipa>
+
+页面会显示 IPA 的下载地址，点按钮把它交给 SideInstaller 完成安装。
+
+> 也可以把 IPA 从 Release 页面下载到「文件」App，然后放进
+> **文件 › 我的 iPhone › SideInstaller** 并命名为 `SideStore.ipa`，
+> SideInstaller 会自动识别并安装。
+
+### 2.5 首次打开
+
+1. 打开「经典书房」，若提示**不受信任的开发者** →
+   设置 › 通用 › VPN 与设备管理 › 点你的 Apple ID → 信任
+2. 若提示需要**开发者模式** → 设置 › 隐私与安全性 › 开发者模式 → 开启 → 重启手机
+
+### 2.6 7 天有效期怎么办
+
+免费 Apple ID 签名的 App 有效期 7 天。到期前打开 SideStore →
+**My Apps** → **Refresh All** 重签即可，**无需电脑、无需数据线**。
+
+建议每 5～6 天手动刷新一次，或在 SideStore 设置里开启后台自动刷新。
+阅读进度存在本机，重签不会丢。
+
+### ⚠️ 安全提醒
+
+只从 **<https://sideinstaller.net/>** 和
+**<https://github.com/FrizzleM/SideInstaller>** 获取 SideInstaller。
+注意 `sideinstaller.com` 是**假站点**，可能携带木马。
+这类工具开放源码，任何人都能伪造同样的图标和名字分发恶意版本——
+务必核对来源。
+
+---
+
+## 三、装到 iPhone 上（Sideloadly 侧载，iOS 26 及以下）
+
+### 3.1 准备 Sideloadly
 
 1. 访问 <https://sideloadly.io>，下载 Windows 版
 2. 安装
@@ -154,8 +260,10 @@ git push -u origin main
    [iTunes 网页版](https://www.apple.com/itunes/) 和
    [iCloud 网页版](https://www.icloud.com/)。
    如果你装的是 Microsoft Store 版，Sideloadly 无法使用，需先卸载。
+   > iTunes 网页版安装包会一并装上 **Bonjour** 服务，
+   > 它是 Wi-Fi 侧载的必需组件。
 
-### 2.2 手机端设置
+### 3.2 手机端设置
 
 在 iPhone 上依次操作：
 
@@ -163,8 +271,18 @@ git push -u origin main
    （此选项仅在 iOS 16+ 且已侧载过应用后才显示）
    - 打开后手机会重启，重启后确认一次
 2. 用数据线连接电脑，手机弹出「信任此电脑」→ 信任
+3. **开启 Wi-Fi 同步**（这一步决定了以后能不能脱离数据线）：
+   - Windows：打开 iTunes → 点左上角设备图标 → 设备摘要页 →
+     勾选 **「通过 Wi-Fi 与此 iPhone 同步」** → 同步
+   - macOS：Finder → 选中设备 → 通用 → 勾选
+     **「使用 Wi-Fi 时显示此 iPhone」** → 同步
 
-### 2.3 侧载
+> 配对完成后，Sideloadly 就能在局域网内发现手机，
+> 之后**安装和续签都可以走 Wi-Fi**，不再需要插线。
+> 若 Sideloadly 里看不到设备，多半是 Bonjour 没装上——
+> 重新运行 iTunes 网页版安装包补装即可。
+
+### 3.3 侧载
 
 1. 打开 Sideloadly
 2. 把 `reader-1.0.0-unsigned.ipa` **拖进窗口**
@@ -174,7 +292,7 @@ git push -u origin main
 4. 点 **Start**
 5. 等待安装完成
 
-### 2.4 首次打开
+### 3.4 首次打开
 
 1. 桌面出现「经典书房」图标
 2. **可能无法直接打开**，提示「不受信任的开发者」。处理：
@@ -184,7 +302,7 @@ git push -u origin main
 
 ---
 
-## 三、关于 7 天有效期
+## 四、关于 7 天有效期
 
 免费 Apple ID 签名的应用 **7 天后会失效**：图标还在桌面，但点开会闪退。
 
@@ -205,7 +323,7 @@ Sideloadly 自带后台守护程序，会在过期前自动重签：
 
 ---
 
-## 四、限制说明
+## 五、限制说明
 
 免费 Apple ID 侧载有以下硬性限制，务必了解：
 
@@ -222,7 +340,7 @@ Sideloadly 自带后台守护程序，会在过期前自动重签：
 
 ---
 
-## 五、如果想更省心：升级到付费方案
+## 六、如果想更省心：升级到付费方案
 
 如果你不想再管签名，可以花 **688 元/年**（中国大陆 Apple Developer Program
 个人账号）换到：
@@ -249,7 +367,7 @@ Sideloadly 自带后台守护程序，会在过期前自动重签：
 
 ---
 
-## 六、常见问题
+## 七、常见问题
 
 **Q：App 打开闪退？**
 A：99% 是 7 天签名过期，重新用 Sideloadly 装一次即可。

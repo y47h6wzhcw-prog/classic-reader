@@ -62,24 +62,40 @@ flutter test          # 跑单元测试
 
 ## 出包并装到 iPhone（不需要 Mac）
 
-完整步骤见 **[SIDELOAD.md](SIDELOAD.md)**，简要版：
+完整步骤见 **[SIDELOAD.md](SIDELOAD.md)**。
+
+### 先出包（Windows 上做）
 
 ```bash
 # 1. 推代码，触发 GitHub Actions 云端 macOS 编译
-bash push_to_github.sh <你的GitHub用户名>
+bash push_to_github.sh <你的GitHub用户名> <PersonalAccessToken>
 #    提示 Username 时填 GitHub 用户名
 #    提示 Password 时粘贴 Personal Access Token（不是登录密码）
 
 # 2. Actions → Build unsigned iOS IPA → 下载 artifact
 #    得到 reader-1.0.0-unsigned.ipa
-
-# 3. Windows 上用 Sideloadly 拖入 IPA + 填 Apple ID → Start
 ```
 
-> 没有 GitHub 账号？注册只要 2 分钟，详见 SIDELOAD.md 的「1.0 首次使用：注册 GitHub 账号」。
->
-> 免费 Apple ID 签名有效期 7 天。Sideloadly 自带后台自动重签，
-> 开启后电脑开机状态下无需手动干预。
+### 再装机
+
+| 你的 iOS 版本 | 方式 | 需要数据线？ |
+|---|---|---|
+| **iOS 27+** | [手机端全无线安装](https://sideinstaller.net/open.html?url=https%3A%2F%2Fgithub.com%2Fy47h6wzhcw-prog%2Fclassic-reader%2Freleases%2Fdownload%2Fv1.0.0%2Freader-1-unsigned.ipa) | ❌ 不需要 |
+| iOS 17.4 ~ 26.x | Sideloadly Wi-Fi 侧载 | 首次需要一次 |
+| iOS 17 以下 | Sideloadly USB 侧载 | 需要 |
+
+> **iOS 27 起支持「设备自配对」**，iPhone 可以自己完成配对与签名，
+> 整个安装流程无需电脑、无需数据线。
+> 手机上打开 [安装指引页](https://github.com/y47h6wzhcw-prog/classic-reader/releases/download/v1.0.0/install.html)
+> 可看图文版步骤。
+
+### 换书 / 重新出包
+
+改 `assets/books/` 下的 txt 与 `manifest.json`（或改 `tools/fetch_books.py`
+让脚本自动下载），推一次代码，Actions 会自动重新出包。
+
+> 免费 Apple ID 签名有效期 7 天。到期前用 SideStore 的 **Refresh All**
+> 重签即可，**不需要电脑**。
 
 ---
 
