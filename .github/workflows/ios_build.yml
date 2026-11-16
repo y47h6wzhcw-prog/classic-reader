@@ -1,0 +1,108 @@
+name: Build unsigned iOS IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_mode:
+        description: '构建模式'
+        required: false
+        default: release
+        type: choice
+        options: [release, debug]
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    # macOS runner：Apple 规定 iOS 编译必须跑在真实 macOS 上
+    runs-on: macos-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          # 2026-04-28 起上传 App Store Connect 的构建需 Xcode 26+ / iOS 26 SDK
+          for v in 26.4 26.3 26.2 26.1 26; do
+            if [ -d "/Applications/Xcode_${v}.app" ]; then
+              sudo xcode-select -s "/Applications/Xcode_${v}.app"
+              break
+            fi
+          done
+          xcodebuild -version
+          swift --version
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: stable
+          cache: true
+
+      - name: Generate iOS project
+        # ios/ 目录不入库（见 ios/README.md），这里用匹配 SDK 的模板生成
+        run: |
+          flutter create --platforms=ios --org com.example --project-name classic_reader .
+          echo "--- generated ---"
+          ls ios/
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
+        with:
+          path: ios/Pods
+          key: pods-${{ runner.os }}-${{ hashFiles('ios/Podfile.lock') }}
+          restore-keys: pods-${{ runner.os }}-
+
+      - name: Pod install
+        run: |
+          cd ios
+          pod install
+          cd ..
+
+      - name: Analyze
+        run: flutter analyze --no-fatal-infos
+
+      - name: Test
+        run: flutter test
+
+      - name: Read version
+        id: ver
+        run: |
+          VERSION=$(grep -E '^version:' pubspec.yaml | head -1 | sed -E 's/.*\+//')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build iOS (no codesign)
+        run: |
+          flutter build ios --release --no-codesign \
+            --build-name=${{ steps.ver.outputs.version }} \
+            --build-number=${{ github.run_number }}
+
+      - name: Package as IPA
+        run: |
+          APP="build/ios/iphoneos/Runner.app"
+          if [ ! -d "$APP" ]; then
+            echo "Runner.app not found, searching..."
+            APP=$(find build/ios -maxdepth 3 -name "Runner.app" -type d | head -1)
+          fi
+          echo "Using: $APP"
+          STAGE=$(mktemp -d)
+          mkdir -p "$STAGE/Payload"
+          cp -R "$APP" "$STAGE/Payload/"
+          cd "$STAGE"
+          zip -qry "$GITHUB_WORKSPACE/reader-${{ steps.ver.outputs.version }}-unsigned.ipa" Payload
+          cd "$GITHUB_WORKSPACE"
+          ls -lh reader-*.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reader-unsigned-ipa
+          path: reader-*-unsigned.ipa
+          retention-days: 30
+          if-no-files-found: error

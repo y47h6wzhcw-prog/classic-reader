@@ -1,0 +1,12 @@
+{
+  "name": "Classic Reader",
+  "short_name": "经典书房",
+  "description": "内置中英文公版名著的离线阅读器",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF8F3",
+  "theme_color": "#8C6A4A",
+  "icons": [],
+  "prefer_related_applications": false
+}

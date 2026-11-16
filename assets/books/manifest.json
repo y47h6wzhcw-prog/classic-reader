@@ -1,0 +1,1127 @@
+[
+  {
+    "id": 23863,
+    "lang": "zh",
+    "file": "zh_23863_shuihu_zhuan.txt",
+    "title": "水浒传",
+    "titleAlt": "Water Margin",
+    "author": "施耐庵",
+    "chars": 544453
+  },
+  {
+    "id": 23950,
+    "lang": "zh",
+    "file": "zh_23950_sanguo_yanyi.txt",
+    "title": "三国演义",
+    "titleAlt": "Romance of the Three Kingdoms",
+    "author": "罗贯中",
+    "chars": 622096
+  },
+  {
+    "id": 23962,
+    "lang": "zh",
+    "file": "zh_23962_xiyou_ji.txt",
+    "title": "西游记",
+    "titleAlt": "Journey to the West",
+    "author": "吴承恩",
+    "chars": 757516
+  },
+  {
+    "id": 24264,
+    "lang": "zh",
+    "file": "zh_24264_hongloumeng.txt",
+    "title": "红楼梦",
+    "titleAlt": "Dream of the Red Chamber",
+    "author": "曹雪芹",
+    "chars": 906032
+  },
+  {
+    "id": 24032,
+    "lang": "zh",
+    "file": "zh_24032_rulin_waishi.txt",
+    "title": "儒林外史",
+    "titleAlt": "The Scholars",
+    "author": "吴敬梓",
+    "chars": 278676
+  },
+  {
+    "id": 51828,
+    "lang": "zh",
+    "file": "zh_51828_liaozhai_zhiyi.txt",
+    "title": "聊斋志异",
+    "titleAlt": "Strange Tales from a Chinese Studio",
+    "author": "蒲松龄",
+    "chars": 487740
+  },
+  {
+    "id": 25124,
+    "lang": "zh",
+    "file": "zh_25124_laocan_youji.txt",
+    "title": "老残游记",
+    "titleAlt": "The Travels of Lao Can",
+    "author": "刘鹗",
+    "chars": 113185
+  },
+  {
+    "id": 23818,
+    "lang": "zh",
+    "file": "zh_23818_jinghuayuan.txt",
+    "title": "镜花缘",
+    "titleAlt": "Flowers in the Mirror",
+    "author": "李汝珍",
+    "chars": 430000
+  },
+  {
+    "id": 25192,
+    "lang": "zh",
+    "file": "zh_25192_fusheng_liuji.txt",
+    "title": "浮生六记",
+    "titleAlt": "Six Records of a Floating Life",
+    "author": "沈复",
+    "chars": 37660
+  },
+  {
+    "id": 24047,
+    "lang": "zh",
+    "file": "zh_24047_shishuo_xinyu.txt",
+    "title": "世说新语",
+    "titleAlt": "A New Account of the Tales of the World",
+    "author": "刘义庆",
+    "chars": 84862
+  },
+  {
+    "id": 24230,
+    "lang": "zh",
+    "file": "zh_24230_jingu_qiguan.txt",
+    "title": "今古奇观",
+    "titleAlt": "Marvellous Stories Now and Then",
+    "author": "抱瓮老人",
+    "chars": 969433
+  },
+  {
+    "id": 25352,
+    "lang": "zh",
+    "file": "zh_25352_changhenge.txt",
+    "title": "长恨歌",
+    "titleAlt": "Song of Everlasting Sorrow",
+    "author": "白居易",
+    "chars": 1058
+  },
+  {
+    "id": 24051,
+    "lang": "zh",
+    "file": "zh_24051_liwa_zhuan.txt",
+    "title": "李娃传",
+    "titleAlt": "The Tale of Li Wa",
+    "author": "白行简",
+    "chars": 4593
+  },
+  {
+    "id": 24041,
+    "lang": "zh",
+    "file": "zh_24041_luoshenfu.txt",
+    "title": "洛神赋",
+    "titleAlt": "Rhapsody on the Luo River Goddess",
+    "author": "曹植",
+    "chars": 1136
+  },
+  {
+    "id": 23915,
+    "lang": "zh",
+    "file": "zh_23915_qiuranke_zhuan.txt",
+    "title": "虬髯客传",
+    "titleAlt": "The Curly-Bearded Stranger",
+    "author": "杜光庭",
+    "chars": 2638
+  },
+  {
+    "id": 25225,
+    "lang": "zh",
+    "file": "zh_25225_guwen_guanzhi.txt",
+    "title": "古文观止",
+    "titleAlt": "A Selection of Classical Prose",
+    "author": "吴楚材",
+    "chars": 183458
+  },
+  {
+    "id": 23906,
+    "lang": "zh",
+    "file": "zh_23906_xixiangji.txt",
+    "title": "西厢记",
+    "titleAlt": "The West Chamber",
+    "author": "王实甫",
+    "chars": 46370
+  },
+  {
+    "id": 23849,
+    "lang": "zh",
+    "file": "zh_23849_mudanting.txt",
+    "title": "牡丹亭",
+    "titleAlt": "The Peony Pavilion",
+    "author": "汤显祖",
+    "chars": 62116
+  },
+  {
+    "id": 25246,
+    "lang": "zh",
+    "file": "zh_25246_pipaji.txt",
+    "title": "琵琶记",
+    "titleAlt": "The Story of a Pipa",
+    "author": "高明",
+    "chars": 73009
+  },
+  {
+    "id": 24234,
+    "lang": "zh",
+    "file": "zh_24234_taohuashan.txt",
+    "title": "桃花扇",
+    "titleAlt": "Peach Blossom Fan",
+    "author": "孔尚任",
+    "chars": 36532
+  },
+  {
+    "id": 27166,
+    "lang": "zh",
+    "file": "zh_27166_nahan.txt",
+    "title": "呐喊",
+    "titleAlt": "Call to Arms",
+    "author": "鲁迅",
+    "chars": 96820
+  },
+  {
+    "id": 24042,
+    "lang": "zh",
+    "file": "zh_24042_panghuang.txt",
+    "title": "彷徨",
+    "titleAlt": "Wandering",
+    "author": "鲁迅",
+    "chars": 69034
+  },
+  {
+    "id": 25271,
+    "lang": "zh",
+    "file": "zh_25271_chaohua_xishi.txt",
+    "title": "朝花夕拾",
+    "titleAlt": "Dawn Blossoms Plucked at Dusk",
+    "author": "鲁迅",
+    "chars": 37294
+  },
+  {
+    "id": 25423,
+    "lang": "zh",
+    "file": "zh_25423_kuangren_riji.txt",
+    "title": "狂人日记",
+    "titleAlt": "Diary of a Madman",
+    "author": "鲁迅",
+    "chars": 4978
+  },
+  {
+    "id": 25242,
+    "lang": "zh",
+    "file": "zh_25242_yecao.txt",
+    "title": "野草",
+    "titleAlt": "Wild Grass",
+    "author": "鲁迅",
+    "chars": 19839
+  },
+  {
+    "id": 25332,
+    "lang": "zh",
+    "file": "zh_25332_ahq_zhengzhuan.txt",
+    "title": "阿Q正传",
+    "titleAlt": "The True Story of Ah Q",
+    "author": "鲁迅",
+    "chars": 27044
+  },
+  {
+    "id": 24138,
+    "lang": "zh",
+    "file": "zh_24138_guanchang_xianxingji.txt",
+    "title": "官场现形记",
+    "titleAlt": "The Bureaucracy Exposed",
+    "author": "李宝嘉",
+    "chars": 668792
+  },
+  {
+    "id": 25327,
+    "lang": "zh",
+    "file": "zh_25327_ernv_yingxiongzhuan.txt",
+    "title": "儿女英雄传",
+    "titleAlt": "A Tale of Heroic Children",
+    "author": "文康",
+    "chars": 558984
+  },
+  {
+    "id": 25376,
+    "lang": "zh",
+    "file": "zh_25376_sanxia_wuyi.txt",
+    "title": "三侠五义",
+    "titleAlt": "The Seven Heroes and Five Gallants",
+    "author": "石玉昆",
+    "chars": 514747
+  },
+  {
+    "id": 24099,
+    "lang": "zh",
+    "file": "zh_24099_ershinianmu_guai_xianzhuang.txt",
+    "title": "二十年目睹之怪现状",
+    "titleAlt": "Strange Cases in Twenty Years",
+    "author": "吴趼人",
+    "chars": 550937
+  },
+  {
+    "id": 26970,
+    "lang": "zh",
+    "file": "zh_26970_penggongan.txt",
+    "title": "彭公案",
+    "titleAlt": "The Cases of Magistrate Peng",
+    "author": "行素",
+    "chars": 906282
+  },
+  {
+    "id": 27686,
+    "lang": "zh",
+    "file": "zh_27686_digongan.txt",
+    "title": "狄公案",
+    "titleAlt": "Cases of Judge Dee",
+    "author": "作者不详",
+    "chars": 209921
+  },
+  {
+    "id": 23835,
+    "lang": "zh",
+    "file": "zh_23835_suitang_yanyi.txt",
+    "title": "隋唐演义",
+    "titleAlt": "Stories of the Sui and Tang Dynasties",
+    "author": "褚人获",
+    "chars": 627454
+  },
+  {
+    "id": 23910,
+    "lang": "zh",
+    "file": "zh_23910_fengshen_yanyi.txt",
+    "title": "封神演义",
+    "titleAlt": "Investiture of the Gods",
+    "author": "许仲琳",
+    "chars": 601389
+  },
+  {
+    "id": 23824,
+    "lang": "zh",
+    "file": "zh_23824_shuotang.txt",
+    "title": "说唐",
+    "titleAlt": "Stories of the Tang",
+    "author": "陈寿",
+    "chars": 210905
+  },
+  {
+    "id": 24226,
+    "lang": "zh",
+    "file": "zh_24226_shiji.txt",
+    "title": "史记",
+    "titleAlt": "Records of the Grand Historian",
+    "author": "司马迁",
+    "chars": 660804
+  },
+  {
+    "id": 24049,
+    "lang": "zh",
+    "file": "zh_24049_hanfeizi.txt",
+    "title": "韩非子",
+    "titleAlt": "Han Feizi",
+    "author": "韩非",
+    "chars": 138781
+  },
+  {
+    "id": 24039,
+    "lang": "zh",
+    "file": "zh_24039_laozi.txt",
+    "title": "老子",
+    "titleAlt": "Laozi",
+    "author": "老子",
+    "chars": 7056
+  },
+  {
+    "id": 7337,
+    "lang": "zh",
+    "file": "zh_7337_daodejing.txt",
+    "title": "道德经",
+    "titleAlt": "Tao Te Ching",
+    "author": "老子",
+    "chars": 7431
+  },
+  {
+    "id": 23839,
+    "lang": "zh",
+    "file": "zh_23839_lunyu.txt",
+    "title": "论语",
+    "titleAlt": "Analects of Confucius",
+    "author": "孔子弟子",
+    "chars": 24520
+  },
+  {
+    "id": 24178,
+    "lang": "zh",
+    "file": "zh_24178_mengzi.txt",
+    "title": "孟子",
+    "titleAlt": "Mencius",
+    "author": "孟子",
+    "chars": 48427
+  },
+  {
+    "id": 25288,
+    "lang": "zh",
+    "file": "zh_25288_shanhaijing.txt",
+    "title": "山海经",
+    "titleAlt": "Classic of Mountains and Seas",
+    "author": "佚名",
+    "chars": 42914
+  },
+  {
+    "id": 23873,
+    "lang": "zh",
+    "file": "zh_23873_shijing.txt",
+    "title": "诗经",
+    "titleAlt": "The Book of Songs",
+    "author": "佚名",
+    "chars": 44746
+  },
+  {
+    "id": 25501,
+    "lang": "zh",
+    "file": "zh_25501_yijing.txt",
+    "title": "易经",
+    "titleAlt": "The Book of Changes",
+    "author": "佚名",
+    "chars": 31665
+  },
+  {
+    "id": 12479,
+    "lang": "zh",
+    "file": "zh_12479_sanzijing.txt",
+    "title": "三字经",
+    "titleAlt": "Three Character Classic",
+    "author": "王应麟",
+    "chars": 1510
+  },
+  {
+    "id": 25196,
+    "lang": "zh",
+    "file": "zh_25196_baijiaxing.txt",
+    "title": "百家姓",
+    "titleAlt": "Hundred Family Surnames",
+    "author": "佚名",
+    "chars": 749
+  },
+  {
+    "id": 24050,
+    "lang": "zh",
+    "file": "zh_24050_caigentan.txt",
+    "title": "菜根谭",
+    "titleAlt": "Roots of Wisdom",
+    "author": "洪应明",
+    "chars": 9679
+  },
+  {
+    "id": 24058,
+    "lang": "zh",
+    "file": "zh_24058_mutianzi_zhuan.txt",
+    "title": "穆天子传",
+    "titleAlt": "The Biography of King Mu",
+    "author": "佚名",
+    "chars": 16282
+  },
+  {
+    "id": 52323,
+    "lang": "zh",
+    "file": "zh_52323_tangshi_sanbaishou.txt",
+    "title": "唐诗三百首",
+    "titleAlt": "Three Hundred Tang Poems",
+    "author": "蘅塘退士 编",
+    "chars": 31378
+  },
+  {
+    "id": 24169,
+    "lang": "zh",
+    "file": "zh_24169_litaibai_ji.txt",
+    "title": "李太白集",
+    "titleAlt": "Poems of Li Bai",
+    "author": "李白",
+    "chars": 222845
+  },
+  {
+    "id": 25247,
+    "lang": "zh",
+    "file": "zh_25247_liyishan_shiji.txt",
+    "title": "李义山诗集",
+    "titleAlt": "Poems of Li Shangyin",
+    "author": "李商隐",
+    "chars": 48644
+  },
+  {
+    "id": 25367,
+    "lang": "zh",
+    "file": "zh_25367_shuyu_ci.txt",
+    "title": "漱玉词",
+    "titleAlt": "Shuyu Ci",
+    "author": "李清照",
+    "chars": 4101
+  },
+  {
+    "id": 25194,
+    "lang": "zh",
+    "file": "zh_25194_yinshui_ci.txt",
+    "title": "饮水词集",
+    "titleAlt": "Yinshui Ci",
+    "author": "纳兰性德",
+    "chars": 9974
+  },
+  {
+    "id": 25218,
+    "lang": "zh",
+    "file": "zh_25218_liuyi_ci.txt",
+    "title": "六一词",
+    "titleAlt": "Liuyi Ci",
+    "author": "欧阳修",
+    "chars": 20051
+  },
+  {
+    "id": 25397,
+    "lang": "zh",
+    "file": "zh_25397_lunheng.txt",
+    "title": "论衡",
+    "titleAlt": "Discourses on the Balance of Discourses",
+    "author": "王充",
+    "chars": 214315
+  },
+  {
+    "id": 24112,
+    "lang": "zh",
+    "file": "zh_24112_renjian_cihua.txt",
+    "title": "人间词话",
+    "titleAlt": "Remarks on Poetry",
+    "author": "王国维",
+    "chars": 14692
+  },
+  {
+    "id": 25289,
+    "lang": "zh",
+    "file": "zh_25289_canglang_shihua.txt",
+    "title": "沧浪诗话",
+    "titleAlt": "Canglang Shihua",
+    "author": "严羽",
+    "chars": 12621
+  },
+  {
+    "id": 23822,
+    "lang": "zh",
+    "file": "zh_23822_wenxin_diaolong.txt",
+    "title": "文心雕龙",
+    "titleAlt": "Wenxin Diaolong",
+    "author": "刘勰",
+    "chars": 49311
+  },
+  {
+    "id": 25380,
+    "lang": "zh",
+    "file": "zh_25380_xianqing_ouji.txt",
+    "title": "闲情偶寄",
+    "titleAlt": "Idle Thoughts",
+    "author": "李渔",
+    "chars": 196414
+  },
+  {
+    "id": 27122,
+    "lang": "zh",
+    "file": "zh_27122_laoxuean_biji.txt",
+    "title": "老学庵笔记",
+    "titleAlt": "Laoxue'an Biji",
+    "author": "陆游",
+    "chars": 61198
+  },
+  {
+    "id": 27292,
+    "lang": "zh",
+    "file": "zh_27292_mengxi_bitan.txt",
+    "title": "梦溪笔谈",
+    "titleAlt": "Dream Pool Essays",
+    "author": "沈括",
+    "chars": 106118
+  },
+  {
+    "id": 24052,
+    "lang": "zh",
+    "file": "zh_24052_yuhu_qinghua.txt",
+    "title": "玉壶清话",
+    "titleAlt": "Yuhu Qinghua",
+    "author": "陶谷",
+    "chars": 53037
+  },
+  {
+    "id": 25558,
+    "lang": "zh",
+    "file": "zh_25558_shenyin_yu.txt",
+    "title": "呻吟语",
+    "titleAlt": "Shengyin Yu",
+    "author": "吕坤",
+    "chars": 168544
+  },
+  {
+    "id": 25262,
+    "lang": "zh",
+    "file": "zh_25262_rizhi_lu.txt",
+    "title": "日知录",
+    "titleAlt": "Rizhi Lu",
+    "author": "顾炎武",
+    "chars": 514527
+  },
+  {
+    "id": 24048,
+    "lang": "zh",
+    "file": "zh_24048_liji.txt",
+    "title": "礼记",
+    "titleAlt": "The Book of Rites",
+    "author": "戴圣",
+    "chars": 127795
+  },
+  {
+    "id": 25696,
+    "lang": "zh",
+    "file": "zh_25696_baopuzi.txt",
+    "title": "抱朴子",
+    "titleAlt": "Baopuzi",
+    "author": "葛洪",
+    "chars": 6683
+  },
+  {
+    "id": 25368,
+    "lang": "zh",
+    "file": "zh_25368_xijing_zaoji.txt",
+    "title": "西京杂记",
+    "titleAlt": "Miscellaneous Records of the Western Capital",
+    "author": "葛洪",
+    "chars": 18393
+  },
+  {
+    "id": 25362,
+    "lang": "zh",
+    "file": "zh_25362_soushenji.txt",
+    "title": "搜神记",
+    "titleAlt": "In Search of the Supernatural",
+    "author": "干宝",
+    "chars": 75675
+  },
+  {
+    "id": 7266,
+    "lang": "zh",
+    "file": "zh_7266_soushen_houji.txt",
+    "title": "搜神后记",
+    "titleAlt": "More Records of the Supernatural",
+    "author": "陶渊明",
+    "chars": 19933
+  },
+  {
+    "id": 24004,
+    "lang": "zh",
+    "file": "zh_24004_doueyuan.txt",
+    "title": "窦娥冤",
+    "titleAlt": "Injustice to Dou E",
+    "author": "关汉卿",
+    "chars": 18470
+  },
+  {
+    "id": 1342,
+    "lang": "en",
+    "file": "en_1342_pride_and_prejudice.txt",
+    "title": "Pride and Prejudice",
+    "titleAlt": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "chars": 728264
+  },
+  {
+    "id": 11,
+    "lang": "en",
+    "file": "en_11_alices_adventures_in_wonderland.txt",
+    "title": "Alice's Adventures in Wonderland",
+    "titleAlt": "Alice in Wonderland",
+    "author": "Lewis Carroll",
+    "chars": 144529
+  },
+  {
+    "id": 74,
+    "lang": "en",
+    "file": "en_74_the_adventures_of_tom_sawyer.txt",
+    "title": "The Adventures of Tom Sawyer",
+    "titleAlt": "Tom Sawyer",
+    "author": "Mark Twain",
+    "chars": 392579
+  },
+  {
+    "id": 76,
+    "lang": "en",
+    "file": "en_76_adventures_of_huckleberry_finn.txt",
+    "title": "Adventures of Huckleberry Finn",
+    "titleAlt": "Huckleberry Finn",
+    "author": "Mark Twain",
+    "chars": 570864
+  },
+  {
+    "id": 1661,
+    "lang": "en",
+    "file": "en_1661_the_adventures_of_sherlock_holmes.txt",
+    "title": "The Adventures of Sherlock Holmes",
+    "titleAlt": "Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "chars": 562137
+  },
+  {
+    "id": 244,
+    "lang": "en",
+    "file": "en_244_a_study_in_scarlet.txt",
+    "title": "A Study in Scarlet",
+    "titleAlt": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "chars": 239349
+  },
+  {
+    "id": 2852,
+    "lang": "en",
+    "file": "en_2852_the_hound_of_the_baskervilles.txt",
+    "title": "The Hound of the Baskervilles",
+    "titleAlt": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "chars": 354058
+  },
+  {
+    "id": 2097,
+    "lang": "en",
+    "file": "en_2097_the_sign_of_the_four.txt",
+    "title": "The Sign of the Four",
+    "titleAlt": "The Sign of the Four",
+    "author": "Arthur Conan Doyle",
+    "chars": 232067
+  },
+  {
+    "id": 1260,
+    "lang": "en",
+    "file": "en_1260_jane_eyre.txt",
+    "title": "Jane Eyre",
+    "titleAlt": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "chars": 1022193
+  },
+  {
+    "id": 768,
+    "lang": "en",
+    "file": "en_768_wuthering_heights.txt",
+    "title": "Wuthering Heights",
+    "titleAlt": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "chars": 645457
+  },
+  {
+    "id": 2701,
+    "lang": "en",
+    "file": "en_2701_moby_dick.txt",
+    "title": "Moby Dick",
+    "titleAlt": "Moby Dick",
+    "author": "Herman Melville",
+    "chars": 1218761
+  },
+  {
+    "id": 43,
+    "lang": "en",
+    "file": "en_43_dr_jekyll_and_mr_hyde.txt",
+    "title": "Dr. Jekyll and Mr. Hyde",
+    "titleAlt": "Dr. Jekyll and Mr. Hyde",
+    "author": "R.L. Stevenson",
+    "chars": 138786
+  },
+  {
+    "id": 120,
+    "lang": "en",
+    "file": "en_120_treasure_island.txt",
+    "title": "Treasure Island",
+    "titleAlt": "Treasure Island",
+    "author": "R.L. Stevenson",
+    "chars": 364356
+  },
+  {
+    "id": 421,
+    "lang": "en",
+    "file": "en_421_kidnapped.txt",
+    "title": "Kidnapped",
+    "titleAlt": "Kidnapped",
+    "author": "R.L. Stevenson",
+    "chars": 422958
+  },
+  {
+    "id": 98,
+    "lang": "en",
+    "file": "en_98_a_tale_of_two_cities.txt",
+    "title": "A Tale of Two Cities",
+    "titleAlt": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "chars": 757406
+  },
+  {
+    "id": 730,
+    "lang": "en",
+    "file": "en_730_oliver_twist.txt",
+    "title": "Oliver Twist",
+    "titleAlt": "Oliver Twist",
+    "author": "Charles Dickens",
+    "chars": 892943
+  },
+  {
+    "id": 1400,
+    "lang": "en",
+    "file": "en_1400_great_expectations.txt",
+    "title": "Great Expectations",
+    "titleAlt": "Great Expectations",
+    "author": "Charles Dickens",
+    "chars": 994362
+  },
+  {
+    "id": 1023,
+    "lang": "en",
+    "file": "en_1023_bleak_house.txt",
+    "title": "Bleak House",
+    "titleAlt": "Bleak House",
+    "author": "Charles Dickens",
+    "chars": 1939161
+  },
+  {
+    "id": 766,
+    "lang": "en",
+    "file": "en_766_david_copperfield.txt",
+    "title": "David Copperfield",
+    "titleAlt": "David Copperfield",
+    "author": "Charles Dickens",
+    "chars": 1934420
+  },
+  {
+    "id": 46,
+    "lang": "en",
+    "file": "en_46_a_christmas_carol.txt",
+    "title": "A Christmas Carol",
+    "titleAlt": "A Christmas Carol",
+    "author": "Charles Dickens",
+    "chars": 158403
+  },
+  {
+    "id": 55,
+    "lang": "en",
+    "file": "en_55_the_wonderful_wizard_of_oz.txt",
+    "title": "The Wonderful Wizard of Oz",
+    "titleAlt": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum",
+    "chars": 207707
+  },
+  {
+    "id": 1080,
+    "lang": "en",
+    "file": "en_1080_a_modest_proposal.txt",
+    "title": "A Modest Proposal",
+    "titleAlt": "A Modest Proposal",
+    "author": "Jonathan Swift",
+    "chars": 19492
+  },
+  {
+    "id": 1200,
+    "lang": "en",
+    "file": "en_1200_gargantua_and_pantagruel.txt",
+    "title": "Gargantua and Pantagruel",
+    "titleAlt": "Gargantua and Pantagruel",
+    "author": "François Rabelais",
+    "chars": 1832865
+  },
+  {
+    "id": 1232,
+    "lang": "en",
+    "file": "en_1232_the_prince.txt",
+    "title": "The Prince",
+    "titleAlt": "The Prince",
+    "author": "Niccolò Machiavelli",
+    "chars": 282492
+  },
+  {
+    "id": 996,
+    "lang": "en",
+    "file": "en_996_don_quixote.txt",
+    "title": "Don Quixote",
+    "titleAlt": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "chars": 2297414
+  },
+  {
+    "id": 10,
+    "lang": "en",
+    "file": "en_10_the_king_james_version_of_the_bible.txt",
+    "title": "The King James Version of the Bible",
+    "titleAlt": "The Bible (King James Version)",
+    "author": "Various",
+    "chars": 4332311
+  },
+  {
+    "id": 1727,
+    "lang": "en",
+    "file": "en_1727_the_odyssey.txt",
+    "title": "The Odyssey",
+    "titleAlt": "The Odyssey",
+    "author": "Homer",
+    "chars": 678685
+  },
+  {
+    "id": 1533,
+    "lang": "en",
+    "file": "en_1533_macbeth.txt",
+    "title": "Macbeth",
+    "titleAlt": "Macbeth",
+    "author": "William Shakespeare",
+    "chars": 104444
+  },
+  {
+    "id": 203,
+    "lang": "en",
+    "file": "en_203_uncle_toms_cabin.txt",
+    "title": "Uncle Tom's Cabin",
+    "titleAlt": "Uncle Tom's Cabin",
+    "author": "Harriet Beecher Stowe",
+    "chars": 1005541
+  },
+  {
+    "id": 45,
+    "lang": "en",
+    "file": "en_45_anne_of_green_gables.txt",
+    "title": "Anne of Green Gables",
+    "titleAlt": "Anne of Green Gables",
+    "author": "L.M. Montgomery",
+    "chars": 560983
+  },
+  {
+    "id": 146,
+    "lang": "en",
+    "file": "en_146_a_little_princess.txt",
+    "title": "A Little Princess",
+    "titleAlt": "A Little Princess",
+    "author": "Frances Hodgson Burnett",
+    "chars": 364279
+  },
+  {
+    "id": 243,
+    "lang": "en",
+    "file": "en_243_the_secret_garden.txt",
+    "title": "The Secret Garden",
+    "titleAlt": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "chars": 322148
+  },
+  {
+    "id": 289,
+    "lang": "en",
+    "file": "en_289_the_wind_in_the_willows.txt",
+    "title": "The Wind in the Willows",
+    "titleAlt": "The Wind in the Willows",
+    "author": "Kenneth Grahame",
+    "chars": 324725
+  },
+  {
+    "id": 215,
+    "lang": "en",
+    "file": "en_215_the_call_of_the_wild.txt",
+    "title": "The Call of the Wild",
+    "titleAlt": "The Call of the Wild",
+    "author": "Jack London",
+    "chars": 175554
+  },
+  {
+    "id": 910,
+    "lang": "en",
+    "file": "en_910_white_fang.txt",
+    "title": "White Fang",
+    "titleAlt": "White Fang",
+    "author": "Jack London",
+    "chars": 397439
+  },
+  {
+    "id": 219,
+    "lang": "en",
+    "file": "en_219_heart_of_darkness.txt",
+    "title": "Heart of Darkness",
+    "titleAlt": "Heart of Darkness",
+    "author": "Joseph Conrad",
+    "chars": 209881
+  },
+  {
+    "id": 2814,
+    "lang": "en",
+    "file": "en_2814_dubliners.txt",
+    "title": "Dubliners",
+    "titleAlt": "Dubliners",
+    "author": "James Joyce",
+    "chars": 369706
+  },
+  {
+    "id": 174,
+    "lang": "en",
+    "file": "en_174_the_picture_of_dorian_gray.txt",
+    "title": "The Picture of Dorian Gray",
+    "titleAlt": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "chars": 429220
+  },
+  {
+    "id": 5200,
+    "lang": "en",
+    "file": "en_5200_metamorphosis.txt",
+    "title": "Metamorphosis",
+    "titleAlt": "Metamorphosis",
+    "author": "Franz Kafka",
+    "chars": 118406
+  },
+  {
+    "id": 84,
+    "lang": "en",
+    "file": "en_84_frankenstein.txt",
+    "title": "Frankenstein",
+    "titleAlt": "Frankenstein",
+    "author": "Mary Shelley",
+    "chars": 419194
+  },
+  {
+    "id": 345,
+    "lang": "en",
+    "file": "en_345_dracula.txt",
+    "title": "Dracula",
+    "titleAlt": "Dracula",
+    "author": "Bram Stoker",
+    "chars": 845675
+  },
+  {
+    "id": 1998,
+    "lang": "en",
+    "file": "en_1998_thus_spake_zarathustra.txt",
+    "title": "Thus Spake Zarathustra",
+    "titleAlt": "Thus Spake Zarathustra",
+    "author": "Friedrich Nietzsche",
+    "chars": 636924
+  },
+  {
+    "id": 4363,
+    "lang": "en",
+    "file": "en_4363_beyond_good_and_evil.txt",
+    "title": "Beyond Good and Evil",
+    "titleAlt": "Beyond Good and Evil",
+    "author": "Friedrich Nietzsche",
+    "chars": 382726
+  },
+  {
+    "id": 2680,
+    "lang": "en",
+    "file": "en_2680_meditations.txt",
+    "title": "Meditations",
+    "titleAlt": "Meditations",
+    "author": "Marcus Aurelius",
+    "chars": 398126
+  },
+  {
+    "id": 155,
+    "lang": "en",
+    "file": "en_155_the_moonstone.txt",
+    "title": "The Moonstone",
+    "titleAlt": "The Moonstone",
+    "author": "Wilkie Collins",
+    "chars": 1073296
+  },
+  {
+    "id": 514,
+    "lang": "en",
+    "file": "en_514_little_women.txt",
+    "title": "Little Women",
+    "titleAlt": "Little Women",
+    "author": "Louisa May Alcott",
+    "chars": 1006719
+  },
+  {
+    "id": 2600,
+    "lang": "en",
+    "file": "en_2600_war_and_peace.txt",
+    "title": "War and Peace",
+    "titleAlt": "War and Peace",
+    "author": "Leo Tolstoy",
+    "chars": 3206589
+  },
+  {
+    "id": 16328,
+    "lang": "en",
+    "file": "en_16328_beowulf.txt",
+    "title": "Beowulf",
+    "titleAlt": "Beowulf",
+    "author": "Anonymous",
+    "chars": 273258
+  },
+  {
+    "id": 1322,
+    "lang": "en",
+    "file": "en_1322_leaves_of_grass.txt",
+    "title": "Leaves of Grass",
+    "titleAlt": "Leaves of Grass",
+    "author": "Walt Whitman",
+    "chars": 736843
+  },
+  {
+    "id": 35,
+    "lang": "en",
+    "file": "en_35_the_time_machine.txt",
+    "title": "The Time Machine",
+    "titleAlt": "The Time Machine",
+    "author": "H.G. Wells",
+    "chars": 179629
+  },
+  {
+    "id": 36,
+    "lang": "en",
+    "file": "en_36_the_war_of_the_worlds.txt",
+    "title": "The War of the Worlds",
+    "titleAlt": "The War of the Worlds",
+    "author": "H.G. Wells",
+    "chars": 337298
+  },
+  {
+    "id": 1257,
+    "lang": "en",
+    "file": "en_1257_the_three_musketeers.txt",
+    "title": "The Three Musketeers",
+    "titleAlt": "The Three Musketeers",
+    "author": "Alexandre Dumas",
+    "chars": 1297623
+  },
+  {
+    "id": 1184,
+    "lang": "en",
+    "file": "en_1184_the_count_of_monte_cristo.txt",
+    "title": "The Count of Monte Cristo",
+    "titleAlt": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "chars": 2624474
+  },
+  {
+    "id": 135,
+    "lang": "en",
+    "file": "en_135_les_mis_rables.txt",
+    "title": "Les Misérables",
+    "titleAlt": "Les Misérables",
+    "author": "Victor Hugo",
+    "chars": 3225521
+  },
+  {
+    "id": 2147,
+    "lang": "en",
+    "file": "en_2147_the_works_of_edgar_allan_poe.txt",
+    "title": "The Works of Edgar Allan Poe",
+    "titleAlt": "The Works of Edgar Allan Poe",
+    "author": "Edgar Allan Poe",
+    "chars": 571049
+  }
+]

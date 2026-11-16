@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经典书房 · App 界面预览</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #F1EFE8;
+    color: #23201C;
+    padding: 32px 20px 60px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 6px; }
+  .sub { font-size: 13px; color: #5F5E5A; margin-bottom: 28px; }
+  .phones { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+  .phone {
+    width: 320px; height: 640px; background: #FAF8F3;
+    border: 8px solid #2C2C2A; border-radius: 38px; overflow: hidden;
+    display: flex; flex-direction: column;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+  .notch {
+    height: 26px; background: #2C2C2A; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .notch::after { content: ""; width: 88px; height: 5px; border-radius: 3px; background: #4A4A48; }
+  .screen { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .appbar { padding: 12px 16px 8px; background: #FAF8F3; }
+  .appbar h2 { font-size: 18px; font-weight: 500; }
+  .search {
+    margin-top: 10px; background: #EDEAE1; border-radius: 10px;
+    padding: 8px 12px; font-size: 13px; color: #888780;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .tabs { display: flex; gap: 0; margin-top: 10px; border-bottom: 1px solid #D3D1C7; }
+  .tab {
+    flex: 1; text-align: center; font-size: 13px; color: #888780;
+    padding: 8px 0 7px; position: relative;
+  }
+  .tab.on { color: #8C6A4A; font-weight: 500; }
+  .tab.on::after {
+    content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+    bottom: 0; width: 34px; height: 2px; background: #8C6A4A; border-radius: 2px;
+  }
+  .list { flex: 1; overflow-y: auto; padding: 4px 16px 16px; }
+  .item { display: flex; gap: 12px; padding: 11px 0; align-items: flex-start; }
+  .cover {
+    width: 42px; height: 58px; border-radius: 5px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 500; border: 1px solid rgba(0,0,0,.08);
+  }
+  .cover.zh { background: #E6F1FB; color: #185FA5; }
+  .cover.en { background: #FAEEDA; color: #854F0B; }
+  .meta { flex: 1; min-width: 0; }
+  .t1 { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .t2 { font-size: 11px; color: #888780; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .t3 { font-size: 10px; color: #A8A69E; margin-top: 5px; }
+  .bar { height: 2.5px; background: rgba(0,0,0,.07); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: #8C6A4A; border-radius: 2px; }
+  .reader-bar {
+    padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,.05);
+    display: flex; align-items: center; gap: 10px; background: #FAF8F3;
+  }
+  .back { font-size: 17px; color: #5F5E5A; }
+  .rt { font-size: 13px; font-weight: 500; }
+  .rs { font-size: 10px; color: #888780; margin-top: 1px; }
+  .ico { font-size: 15px; color: #5F5E5A; margin-left: auto; }
+  .ico + .ico { margin-left: 12px; }
+  .body {
+    flex: 1; overflow-y: auto; padding: 16px 18px;
+    font-size: 15px; line-height: 1.85; color: #23201C;
+  }
+  .body h4 { font-size: 15px; font-weight: 500; margin: 4px 0 12px; text-align: center; }
+  .body p { text-indent: 2em; margin-bottom: 10px; }
+  .pct {
+    padding: 7px 16px 10px; font-size: 11px; color: #888780;
+    display: flex; align-items: center; gap: 10px; background: #FAF8F3;
+  }
+  .pct .bar { flex: 1; margin: 0; }
+  .label {
+    text-align: center; font-size: 11px; color: #888780;
+    margin: 18px 0 -4px; letter-spacing: .05em;
+  }
+  .hint {
+    max-width: 640px; margin-top: 40px; background: #fff;
+    border: 1px solid rgba(0,0,0,.08); border-radius: 12px; padding: 20px 24px;
+    font-size: 13px; line-height: 1.75; color: #444441;
+  }
+  .hint h3 { font-size: 14px; font-weight: 500; margin-bottom: 10px; }
+  .hint ol { margin-left: 18px; }
+  .hint li { margin-bottom: 6px; }
+  code { background: #EDEAE1; padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+</style>
+</head>
+<body>
+  <h1>经典书房 · Classic Reader</h1>
+  <div class="sub">iOS 读书 App 界面预览 —— 纯离线，内置 125 本中英文公版名著（5873 万字）</div>
+
+  <div class="phones">
+    <!-- 书架 -->
+    <div>
+      <div class="label">书架 · 中文</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="appbar">
+            <h2>经典书房</h2>
+            <div class="search">🔍 搜索书名或作者</div>
+            <div class="tabs">
+              <div class="tab on">中文</div>
+              <div class="tab">English</div>
+              <div class="tab">最近阅读</div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="cover zh">中</div>
+              <div class="meta">
+                <div class="t1">红楼梦</div>
+                <div class="t2">曹雪芹 · Dream of the Red Chamber</div>
+                <div class="t3">73.2 万字</div>
+                <div class="bar"><i style="width:42%"></i></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover zh">中</div>
+              <div class="meta">
+                <div class="t1">西游记</div>
+                <div class="t2">吴承恩 · Journey to the West</div>
+                <div class="t3">51.4 万字</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover zh">中</div>
+              <div class="meta">
+                <div class="t1">聊斋志异</div>
+                <div class="t2">蒲松龄 · Strange Tales from a Chinese Studio</div>
+                <div class="t3">30.1 万字</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover zh">中</div>
+              <div class="meta">
+                <div class="t1">浮生六记</div>
+                <div class="t2">沈复 · Six Records of a Floating Life</div>
+                <div class="t3">8.6 万字</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover zh">中</div>
+              <div class="meta">
+                <div class="t1">人间词话</div>
+                <div class="t2">王国维 · Remarks on Poetry</div>
+                <div class="t3">6.2 万字</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 书架英文 -->
+    <div>
+      <div class="label">书架 · English</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="appbar">
+            <h2>经典书房</h2>
+            <div class="search">🔍 搜索书名或作者</div>
+            <div class="tabs">
+              <div class="tab">中文</div>
+              <div class="tab on">English</div>
+              <div class="tab">最近阅读</div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="cover en">EN</div>
+              <div class="meta">
+                <div class="t1">Pride and Prejudice</div>
+                <div class="t2">Jane Austen · Pride and Prejudice</div>
+                <div class="t3">72.8 万 chars</div>
+                <div class="bar"><i style="width:67%"></i></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover en">EN</div>
+              <div class="meta">
+                <div class="t1">The Adventures of Sherlock Holmes</div>
+                <div class="t2">Arthur Conan Doyle · Sherlock Holmes</div>
+                <div class="t3">56.2 万 chars</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover en">EN</div>
+              <div class="meta">
+                <div class="t1">Jane Eyre</div>
+                <div class="t2">Charlotte Brontë · Jane Eyre</div>
+                <div class="t3">102.2 万 chars</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover en">EN</div>
+              <div class="meta">
+                <div class="t1">Moby Dick</div>
+                <div class="t2">Herman Melville · Moby Dick</div>
+                <div class="t3">121.9 万 chars</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cover en">EN</div>
+              <div class="meta">
+                <div class="t1">Alice's Adventures in Wonderland</div>
+                <div class="t2">Lewis Carroll · Alice in Wonderland</div>
+                <div class="t3">14.5 万 chars</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 阅读器 -->
+    <div>
+      <div class="label">阅读器 · 日间</div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="reader-bar">
+            <span class="back">‹</span>
+            <div>
+              <div class="rt">红楼梦</div>
+              <div class="rs">曹雪芹 · 73.2 万字</div>
+            </div>
+            <span class="ico">☰</span><span class="ico">Aa</span>
+          </div>
+          <div class="body">
+            <h4>第一回　甄士隐梦幻识通灵　贾雨村风尘怀闺秀</h4>
+            <p>话说女娲氏炼石补天之时，于大荒山无稽崖炼成高经十二丈、方经二十四丈顽石三万六千五百零一块。</p>
+            <p>娲皇氏因思及洪荒大劫，恐三界元气不足以补全，故炼成此石，遗于青埂峰下。</p>
+            <p>其石自经煅炼之后，灵性已通，能自运大块，说的正是……</p>
+            <p>此方敕字之乡，托生那姑苏乡宦本姓甄氏，字士隐……</p>
+          </div>
+          <div class="pct">
+            <span>42.3%</span>
+            <div class="bar"><i style="width:42%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint">
+    <h3>实际功能</h3>
+    <ol>
+      <li><b>书架</b>：中文 / English / 最近阅读三个分区，书名与作者全文搜索</li>
+      <li><b>阅读器</b>：点击屏幕中部呼出/隐藏工具栏；章节目录按「第X回 / CHAPTER X」自动识别；底部显示阅读百分比</li>
+      <li><b>设置面板</b>：字号 13–30、行距 1.3–2.6、页边距 8–48、日间/夜间主题、系统/衬线/等宽字体</li>
+      <li><b>进度记忆</b>：滚动位置存于本地 SharedPreferences，重开自动回到原处；侧载重签不丢进度</li>
+      <li><b>完全离线</b>：119 本书随包分发，零网络请求，无 SDK、无埋点</li>
+    </ol>
+    <p style="margin-top:12px;color:#888780;font-size:12px">
+      界面为 Flutter 实现，此处为等比静态预览，实际交互效果以真机运行结果为准。
+    </p>
+  </div>
+</body>
+</html>
