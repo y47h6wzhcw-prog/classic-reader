@@ -60,9 +60,27 @@
 
 - **Note**：随便写，比如 `classic-reader`
 - **Expiration**：选 90 days 或 1 year
-- **Scopes**：只勾 **`public_repo`** 就够了（我们推的是公开仓库）
+- **Scopes**：勾选 **`public_repo`** 和 **`workflow`**
 
-生成后那串 `ghp_xxxxxxxx` **只显示一次**，立刻复制保存。
+> ⚠️ **`workflow` 权限必须一起勾。**
+>
+> 本项目包含 `.github/workflows/ios_build.yml`（云端编译用的 workflow）。
+> GitHub 规定：修改 workflow 文件需要 Token 具备 `workflow` scope，
+> 否则 `git push` 会被直接拒绝：
+>
+> ```
+> ! [remote rejected] main -> main
+>   (refusing to allow a Personal Access Token to create or update
+>    workflow `.github/workflows/ios_build.yml` without `workflow` scope)
+> ```
+>
+> 这个限制**无法绕过**——Contents API 和 Git Tree API 同样会返回 404。
+> 只能回去给 Token 补权限：
+>
+> <https://github.com/settings/tokens> → 找到该 Token → **Edit** →
+> 在 Select permissions 搜索 `workflow` → 勾选 → **Update token**
+>
+> 补完权限后 Token 字符串不变，无需重新复制。
 
 ### 1.1 设置 git 身份
 
